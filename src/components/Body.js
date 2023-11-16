@@ -56,7 +56,7 @@ const Body = () => {
             const filterlist = listofresturant.filter(
               (resfi) => resfi.info.avgRating > 4
             );
-            setListOfResturant(filterlist);
+            setFilterSearchRes(filterlist);
           }}
         >
           Top rated
