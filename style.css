@@ -88,3 +88,9 @@
   color: black;
   border: 2px solid black;
 }
+.Footer-container {
+  padding: 10px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
