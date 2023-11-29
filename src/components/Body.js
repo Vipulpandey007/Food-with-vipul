@@ -2,6 +2,7 @@ import Restaurantcard from "./Restaurantcard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utility/useOnlineStatus";
 const Body = () => {
   const [listofresturant, setListOfResturant] = useState([]);
   const [searchRes, setSearchRes] = useState("");
@@ -26,14 +27,17 @@ const Body = () => {
     );
   };
 
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false) return <h1>Connect to Internet</h1>;
   return listofresturant.length === 0 ? (
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="button">
+      <div className="m-4 p-4">
         <input
           type="text"
-          className="filter-search"
+          className="border border-solid border-black rounded-lg p-2 w-60"
           placeholder="Search resturants..."
           value={searchRes}
           onChange={(e) => {
@@ -41,7 +45,7 @@ const Body = () => {
           }}
         ></input>
         <button
-          className="filter"
+          className="px-4 py-2 m-3 bg-green-100 rounded-full"
           onClick={() => {
             const filterres = listofresturant.filter((resn) =>
               resn.info.name.toLowerCase().includes(searchRes.toLowerCase())
@@ -52,7 +56,7 @@ const Body = () => {
           Search
         </button>
         <button
-          className="filter"
+          className="px-4 py-2 bg-red-200 rounded-full"
           onClick={() => {
             const filterlist = listofresturant.filter(
               (resfi) => resfi.info.avgRating > 4
@@ -63,7 +67,7 @@ const Body = () => {
           Top rated
         </button>
       </div>
-      <div className="restaurant-container">
+      <div className="flex flex-wrap">
         {filterSearchRes.map((restaurant) => (
           <Link
             key={restaurant.info.id}
