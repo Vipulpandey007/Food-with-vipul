@@ -27,7 +27,7 @@ const Header = () => {
           </li>
           <li className="px-4">Cart</li>
           <button
-            className="login"
+            className="px-4 py-2 bg-red-200 rounded-full"
             onClick={() => {
               btnName == "login" ? setBtnName("logout") : setBtnName("login");
             }}

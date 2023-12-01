@@ -22,7 +22,7 @@ const Restaurantcard = (props) => {
         className="res-logo"
         src={CDN + cloudinaryImageId}
       ></img>
-      <h3>{name}</h3>
+      <h3 className="font-bold pb-3">{name}</h3>
       <h4>{cuisines.join(", ")}</h4>
       <h4>{costForTwo}</h4>
       <h4>Ratings {avgRating} stars</h4>
@@ -31,6 +31,19 @@ const Restaurantcard = (props) => {
       </h4>
     </div>
   );
+};
+
+export const isOpen = (Restaurantcard) => {
+  return (props) => {
+    return (
+      <div>
+        <label className="absolute bg-black text-white p-2 m-2 rounded-lg">
+          Is Open
+        </label>
+        <Restaurantcard {...props} />
+      </div>
+    );
+  };
 };
 
 export default Restaurantcard;
