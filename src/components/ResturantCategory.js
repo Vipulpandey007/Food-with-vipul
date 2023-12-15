@@ -1,10 +1,7 @@
 import MenuItems from "./MenuItems";
-import { useState } from "react";
-
 const ResturantCategory = (props) => {
-  const [showItems, setShowItems] = useState(false);
   const handleclick = () => {
-    setShowItems(!showItems);
+    props.setShowIndex();
   };
   return (
     <div>
@@ -18,7 +15,7 @@ const ResturantCategory = (props) => {
           </span>
           <span>⬇️</span>
         </div>
-        {showItems && <MenuItems items={props.data.itemCards} />}
+        {props.showItems && <MenuItems items={props.data.itemCards} />}
       </div>
     </div>
   );
