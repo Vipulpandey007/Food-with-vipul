@@ -37,10 +37,10 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="m-4 p-4">
+      <div className="m-4 p-4 text-center">
         <input
           type="text"
-          className="border border-solid border-black rounded-lg p-2 w-60"
+          className="border border-solid border-black rounded-lg p-2 w-80"
           placeholder="Search resturants..."
           value={searchRes}
           onChange={(e) => {

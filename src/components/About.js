@@ -9,7 +9,7 @@ class About extends Component {
   render() {
     return (
       <div className="about">
-        <h1>This is about us page</h1>
+        <h1 className="text-2xl text-center">About Me</h1>
         <User name={"Vipul kumar pandey"} />
       </div>
     );

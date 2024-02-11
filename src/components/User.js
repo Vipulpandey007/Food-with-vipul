@@ -24,7 +24,7 @@ class User extends React.Component {
       <div className="user-card">
         <img src={this.state.userinfo.avatar_url} />
         <h2>Name:- {this.state.userinfo.login}</h2>
-        <h3>Location:-{this.state.userinfo.location}</h3>
+        <h3>Location:-Ranchi,Jharkhand</h3>
         <h3>Contact:- 8340311564</h3>
       </div>
     );
