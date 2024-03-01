@@ -18,7 +18,7 @@ const Contact = () => {
           placeholder="Enter your number"
           className="border border-black p-2 m-2"
         />
-        <button className="border border-black p-2 m-2 bg-gray-100 ">
+        <button className="border border-black p-2 m-2 bg-gray-100" disabled>
           {" "}
           Submit
         </button>
