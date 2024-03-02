@@ -16,7 +16,7 @@ const About = lazy(() => import("./components/About"));
 const Applayout = () => {
   return (
     <Provider store={appStore}>
-      <div className="app">
+      <div className="bg-white dark:bg-gray-600">
         <Header />
         <Outlet />
         <Footer />
