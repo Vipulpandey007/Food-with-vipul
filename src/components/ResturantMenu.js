@@ -25,8 +25,8 @@ const ResturantMenu = () => {
 
   return (
     <div className="text-center">
-      <h1 className="font-bold my-4 text-2xl">{name}</h1>
-      <h3 className="font-bold text-lg">
+      <h1 className="font-bold my-4 text-2xl dark:text-white">{name}</h1>
+      <h3 className="font-bold text-lg dark:text-white">
         {cuisines.join(", ")} -{costForTwoMessage}
       </h3>
       {categories.map((category, index) => (
