@@ -40,7 +40,7 @@ const Body = () => {
       <div className="m-4 p-4 text-center">
         <input
           type="text"
-          className="border border-solid border-black rounded-lg p-2 w-80"
+          className="border border-solid border-black rounded-lg p-2 w-80 mt-[90px]"
           placeholder="Search resturants..."
           value={searchRes}
           onChange={(e) => {
@@ -70,7 +70,7 @@ const Body = () => {
           Top rated
         </button>
       </div>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap w-auto items-center justify-center self-stretch">
         {filterSearchRes.map((restaurant) => (
           <Link
             key={restaurant.info.id}
